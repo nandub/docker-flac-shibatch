@@ -7,7 +7,7 @@ make
 ```
 
 ### Run
-Make sure to put flac files to convert on a folder, ~/tmp/flac_files
+Make sure to put flac files to convert on ~/tmp/flac_files (default location) folder.
 
 ```
 make run
