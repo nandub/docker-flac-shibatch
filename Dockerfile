@@ -23,4 +23,4 @@ WORKDIR /flac/shibatch
 VOLUME /flac/files
 
 ENTRYPOINT ["./convert-flac"]
-CMD ["-h"]
+CMD ["/flac/files"]
