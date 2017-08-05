@@ -10,14 +10,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     unzip \
     wget
 
-RUN add-apt-repository -y ppa:ssrc-packaging-group/ppa
-RUN apt-get update && apt-get install -y --no-install-recommends ssrc \
- && rm -rf /var/lib/apt/lists/*
-
-RUN wget https://github.com/ronalde/flac-src-shibatch/archive/master.zip -O flac-shibatch.zip
-RUN mkdir -p /flac/files
-RUN unzip flac-shibatch.zip -d /flac
-RUN mv /flac/flac-src-shibatch-master /flac/shibatch
+RUN add-apt-repository -y ppa:ssrc-packaging-group/ppa \
+    && apt-get update && apt-get install -y --no-install-recommends ssrc \
+    && rm -rf /var/lib/apt/lists/* \
+    && wget https://github.com/ronalde/flac-src-shibatch/archive/master.zip -O flac-shibatch.zip \
+    && mkdir -p /flac/files \
+    && unzip flac-shibatch.zip -d /flac \
+    && mv /flac/flac-src-shibatch-master /flac/shibatch
 
 WORKDIR /flac/shibatch
 VOLUME /flac/files
