@@ -4,7 +4,7 @@ build:
 	@echo Building image
 	@docker build --rm -t nandub/flac-shibatch .
 
-run:
+run: build
 	@echo Converting local files from $(FILES)
 	@docker run --rm -v $(FILES):/flac/files nandub/flac-shibatch
 
