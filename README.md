@@ -1,4 +1,4 @@
-# flac-shibatch-docker
+# docker-flac-shibatch
 https://lacocina.nl/convert-flac-with-shibatch but dockerize
 
 ### Build
